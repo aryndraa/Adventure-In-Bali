@@ -1,0 +1,114 @@
+:root {
+  --pop: "Poppins", sans-serif;
+  --beb: "Bebas Neue", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: var(--pop);
+  background: #06041a;
+}
+
+ol,
+ul {
+  padding-left: 0;
+}
+
+.title-span {
+  color: #eeff00;
+}
+
+.header {
+  display: flex;
+  padding: 30px 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-family: var(--beb);
+}
+
+.header .header-nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.header .header-nav li {
+  list-style: none;
+}
+
+.header .header-nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: var(--pop);
+}
+
+.header li a:hover {
+  color: #eeff00;
+}
+
+.header-icon {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  .header {
+    padding: 20px 20px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header .header-nav ul {
+    gap: 10px;
+  }
+
+  .header .header-nav li a {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .header .header-nav {
+    display: none;
+  }
+
+  .header-icon {
+    display: block;
+    background: none;
+    border: none;
+  }
+
+  .header-icon button {
+    background: none;
+    border: none;
+  }
+
+  .header-icon button p {
+    color: #fff;
+  }
+}
