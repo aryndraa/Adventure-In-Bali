@@ -42,20 +42,717 @@
           <li>
             <a href="#destination">Destination</a>
           </li>
+
           <li>
-            <a href="#tour">Tour</a>
-          </li>
-          <li>
-            <a href="#booking">Booking</a>
+            <a href="#staycation">Staycation</a>
           </li>
         </ul>
       </nav>
       <nav class="header-icon">
-        <button type="submit">
+        <button onclick="sideActive()">
           <p><i data-feather="menu"></i></p>
         </button>
       </nav>
     </header>
+
+    <nav class="side" id="side">
+      <ul>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#destination">Destination</a>
+        </li>
+
+        <li>
+          <a href="#staycation">Staycation</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- home -->
+    <section class="home" id="home">
+      <div class="home-title">
+        <div class="home-title-content active" id="home1">
+          <h2>Welcome To</h2>
+          <h1>Dewata Island</h1>
+          <p>
+            Bali adalah pulau yang sangat indah dengan panjang garis pantai
+            sekitar 633,35 km. Di Pulau Bali terdapat gunung berapi,
+            sungai-sungai, dan danau. Keberadaan gunung berapi memberikan
+            kesuburan tanah untuk usaha pertanian.
+          </p>
+        </div>
+        <div class="home-title-content home2" id="home2">
+          <h2>Find The</h2>
+          <h1>Unique Culture</h1>
+          <p>
+            Pulau Bali memiliki keunikan dalam budaya yang dimilikinya seperti
+            kesenian Bali meliputi tarian-tarian Bali seperti Tari Pendet, Tari
+            Kecak, Tari Barong dan kegiatan sakral adat istiadat seperti ritual
+            upacara-upacara adat yang sangat kental dan penuh makna salah
+            satunya seperti ritual tradisi Melukat di Bali.
+          </p>
+        </div>
+        <div class="home-title-content home3" id="home3">
+          <h2>Sunset and Sunrise in</h2>
+          <h1>beautiful Beach</h1>
+          <p>
+            Bali sangat terkenal dengan keindahan pantainya. Contohnya, Pantai
+            Kuta yang merupakan objek wisata sangat terkenal. Pantai ini
+            terletak di paling selatan Pulau Bali yang memiliki pantai berpasir
+            putih dan ditumbuhi ratusan hektar pohon nyiur.
+          </p>
+        </div>
+      </div>
+      <div class="home-content">
+        <div class="card-content">
+          <div class="card-title">
+            <h3>Welcome To</h3>
+            <h2>Dewata Island</h2>
+            <button
+              type="button"
+              onclick="switchTitle('home1', 'home3', 'home2'); changeBackgroundImage('assets/img/visualsofdana-uwIRTJuTfkc-unsplash.jpg')"
+            >
+              View
+            </button>
+          </div>
+        </div>
+        <div class="card-content culture">
+          <div class="card-title">
+            <h3>Find The</h3>
+            <h2>Unique Culture.</h2>
+            <button
+              type="button"
+              onclick="switchTitle('home2', 'home1', 'home3'); changeBackgroundImage('assets/wahyu-pratama-otS5DQxUNi4-unsplash.jpg')"
+            >
+              View
+            </button>
+          </div>
+        </div>
+        <div class="card-content beach">
+          <div class="card-title">
+            <h3>Sunset and Sunrise in</h3>
+            <h2>Beautiful Beach</h2>
+            <button
+              type="button"
+              onclick="switchTitle('home3','home1', 'home2');  changeBackgroundImage('assets/visualsofdana-UfVZbqZ1xjs-unsplash.jpg')"
+            >
+              View
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section class="about" id="about">
+      <div class="about-container">
+        <!-- <h3>About The Adventure</h3> -->
+        <h2>Adventure And Action</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          molestias quia consectetur tenetur facilis laboriosam animi impedit
+          beatae et voluptatum a ab quasi id nihil, doloribus fuga laborum
+          repudiandae aut.
+        </p>
+      </div>
+      <div class="about-card">
+        <div class="card-content hicking">
+          <div class="card-title">
+            <h3>Hiking</h3>
+            <a
+              href="#"
+              onmouseover="hoverImage('assets/about/sasha-sashina--UJp4rYpPP0-unsplash.jpg')"
+              onmouseout="resetBackground()"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card-content camp">
+          <div class="card-title">
+            <h3>Camp</h3>
+            <a
+              href="#"
+              onmouseover="hoverImage('assets/about/jonathan-forage-1azAjl8FTnU-unsplash.jpg')"
+              onmouseout="resetBackground()"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card-content party">
+          <div class="card-title">
+            <h3>Party</h3>
+            <a
+              href="#"
+              onmouseover="hoverImage('assets/about/long-truong-Y5PXVs1LpY4-unsplash.jpg')"
+              onmouseout="resetBackground()"
+              >View</a
+            >
+          </div>
+        </div>
+        <div class="card-content surfing">
+          <div class="card-title">
+            <h3>Surfing</h3>
+            <a
+              href="#"
+              onmouseover="hoverImage('assets/about/visualsofdana-lFM-rw_bXVY-unsplash.jpg')"
+              onmouseout="resetBackground()"
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="about-icon">
+        <a href="#destination" class="link-about"
+          >< Lets Select Your Destination ></a
+        >
+        <div class="about-sosmed">
+          <ul>
+            <li>
+              <a href="#"><i data-feather="phone"></i></a>
+            </li>
+            <li>
+              <a href="#"><i data-feather="instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i data-feather="facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i data-feather="twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- destinasi -->
+    <section class="destination" id="destination">
+      <h2>Where Your <span class="title-span">Destination?</span></h2>
+      <div class="destination-container">
+        <p>Select You Favorite Place</p>
+        <div class="opsi">
+          <ul>
+            <li>
+              <button
+                onclick="destiActive(beach, mountain, lake, garden, temple, zoo,water)"
+              >
+                Beach
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="destiActive(mountain, beach, lake, garden, temple, zoo,water)"
+              >
+                Mountain
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="destiActive(lake, mountain, beach, garden, temple, zoo,water)"
+              >
+                Lake
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="destiActive(garden, mountain, lake, beach, temple, zoo,water)"
+              >
+                Garden
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="destiActive(temple, mountain, lake, garden, beach, zoo,water)"
+              >
+                Temple
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="destiActive(zoo, mountain, lake, garden, temple, beach,water)"
+              >
+                Zoo
+              </button>
+            </li>
+            <li>
+              <button
+                onclick="destiActive(water, mountain, lake, garden, temple, zoo,beach)"
+              >
+                Water Park
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="destination-card">
+        <div class="card-list active" id="beach">
+          <div class="card-content sanur">
+            <div class="card-title">
+              <h3>Sanur beach</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content kuta">
+            <div class="card-title">
+              <h3>Kuta Beach</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content nusa">
+            <div class="card-title">
+              <h3>Nusa Dua Beach</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content lovina">
+            <div class="card-title">
+              <h3>Lovina Beach</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content pandawa">
+            <div class="card-title">
+              <h3>Pandawa Beach</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content padang">
+            <div class="card-title">
+              <h3>Padang Galak Beach</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-list" id="mountain">
+          <div class="card-content agung">
+            <div class="card-title">
+              <h3>Mount Agung</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content batur">
+            <div class="card-title">
+              <h3>Mount Batur</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content abang">
+            <div class="card-title">
+              <h3>Mount Abang</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content batukaru">
+            <div class="card-title">
+              <h3>Mount Batukaru</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-list" id="lake">
+          <div class="card-content baturlake">
+            <div class="card-title">
+              <h3>Batur Lake</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content beratan">
+            <div class="card-title">
+              <h3>Beratan Lake</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content tamblingan">
+            <div class="card-title">
+              <h3>Tamblingan Lake</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-list" id="garden">
+          <div class="card-content raya">
+            <div class="card-title">
+              <h3>Bali Botanical Garden</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content bloom">
+            <div class="card-title">
+              <h3>Bloom Garden</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content krisna">
+            <div class="card-title">
+              <h3>Krisna Funstatic Land</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content margarana">
+            <div class="card-title">
+              <h3>Margarana Garden</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content gwk">
+            <div class="card-title">
+              <h3>Garuda Wisnu Kencana</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content sangeh">
+            <div class="card-title">
+              <h3>Sangeh</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content kertalangu">
+            <div class="card-title">
+              <h3>Kertalangu</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content lumintang">
+            <div class="card-title">
+              <h3>Lumintang</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content silas">
+            <div class="card-title">
+              <h3>The Sila's Agrotourism</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content kumbasari">
+            <div class="card-title">
+              <h3>Kumbasari Park</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content nusagarden">
+            <div class="card-title">
+              <h3>Taman Nusa</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content ujung">
+            <div class="card-title">
+              <h3>Taman Ujung</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content padanggarden">
+            <div class="card-title">
+              <h3>Festival Park Padang galak</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content big">
+            <div class="card-title">
+              <h3>Big Garden</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-list" id="temple">
+          <div class="card-content besakih">
+            <div class="card-title">
+              <h3>Besakih temple</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content uluwatu">
+            <div class="card-title">
+              <h3>Uluwatu Temple</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content tanahlot">
+            <div class="card-title">
+              <h3>Tanah Lot Temple</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content ulun">
+            <div class="card-title">
+              <h3>Ulun Danu temple</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content empul">
+            <div class="card-title">
+              <h3>Tirta Empul temple</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content gangga">
+            <div class="card-title">
+              <h3>Tirta Gangga</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content windu">
+            <div class="card-title">
+              <h3>Campuhan Windhu Segara Temple</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content tamanayu">
+            <div class="card-title">
+              <h3>Taman Ayu Temple</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content menjangan">
+            <div class="card-title">
+              <h3>Menjangan Temple</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content gajah">
+            <div class="card-title">
+              <h3>Elephant Cave</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content alas">
+            <div class="card-title">
+              <h3>Alas Kedeaton</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content lempuyang">
+            <div class="card-title">
+              <h3>Lempuyang temple</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-list" id="zoo">
+          <div class="card-content balizoo">
+            <div class="card-title">
+              <h3>Bali Zoo</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content safari">
+            <div class="card-title">
+              <h3>Bali Safari And Marine Park</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content bird">
+            <div class="card-title">
+              <h3>Bird Park Bali</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content reptile">
+            <div class="card-title">
+              <h3>Reptile Park</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content turtel">
+            <div class="card-title">
+              <h3>Turtel island</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content buterfly">
+            <div class="card-title">
+              <h3>Butterfly Park Bali</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content gjh">
+            <div class="card-title">
+              <h3>Elephant Taro Park</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-list" id="water">
+          <div class="card-content boom">
+            <div class="card-title">
+              <h3>Waterboom Bali</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content circus">
+            <div class="card-title">
+              <h3>Circus Waterpark kuta</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content krsna">
+            <div class="card-title">
+              <h3>Krisna Water Sport</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content citra">
+            <div class="card-title">
+              <h3>Citraland Waterpark</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content boom2">
+            <div class="card-title">
+              <h3>Bukit Jati Waterboom</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content flowrider">
+            <div class="card-title">
+              <h3>Flowrider Waterboom Bali</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content kutagren">
+            <div class="card-title">
+              <h3>Place Name</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+          <div class="card-content wakepark">
+            <div class="card-title">
+              <h3>Kuta Green Park</h3>
+              <a href="#"><i data-feather="play"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- staycation-->
+    <section class="staycation" id="staycation">
+      <h2>Best <span class="title-span">staycation</span> Places in Bali</h2>
+      <div class="hotel">
+        <h3>Top 3 Five Star <span class="title-span">Hotels</span> In bali</h3>
+        <div class="list-hotel">
+          <div class="card-content padma">
+            <div class="card-title">
+              <h4>Padma Resort Ubud</h4>
+              <div class="link-hotel">
+                <a href="https://padmaresortlegian.com/">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-content kayon">
+            <div class="card-title">
+              <h4>The Kayon Jungle Resort</h4>
+              <div class="link-hotel">
+                <a href="https://thekayonjungleresort.com/">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-content melia">
+            <div class="card-title">
+              <h4>Meliá Bali</h4>
+              <div class="link-hotel">
+                <a
+                  href="https://www.melia.com/en/hotels/indonesia/bali/melia-bali?ectrans=1&utm_campaign=businessadvantage_ficha&utm_medium=textlink&utm_content=5701&utm_source=tripadvisor&refid=a0e457c3-6e6d-4514-ab63-9883545387b5"
+                  >More Info</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hotel">
+        <h3>Top 3 Five Star <span class="title-span">Resorts</span> In bali</h3>
+        <div class="list-hotel">
+          <div class="card-content maya">
+            <div class="card-title">
+              <h4>Maya Ubud Resort & Spa</h4>
+              <div class="link-hotel">
+                <a href="https://www.mayaresorts.com/ubud">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-content vice">
+            <div class="card-title">
+              <h4>Viceroy Bali</h4>
+              <div class="link-hotel">
+                <a
+                  href="https://www.viceroybali.com/en/?utm_source=tripadvisor&utm_medium=third_party&utm_campaign=business_listing"
+                  >More Info</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card-content ulu">
+            <div class="card-title">
+              <h4>Renaissance Bali Uluwatu Resort & Spa</h4>
+              <div class="link-hotel">
+                <a
+                  href="https://www.marriott.com/id/reservation/availabilitySearch.mi?isSearch=false&propertyCode=DPSUW&fromDate=07/01/2024&toDate=08/01/2024&numberOfRooms=1&numberOfGuests=2&cid=REF_GLB0002Y1H_GLE00070B2_GLF000C19&utm_source=BA&pid=corptaba&clickID=11dfa9d9-0b54-4305-82e8-bd7d86e4f4cd&dclid=CMKXtr2muIMDFSoDgwMdUdsMzg"
+                  >More Info</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hotel">
+        <h3>Top 3 Five Star <span class="title-span">Villas</span> In bali</h3>
+        <div class="list-hotel">
+          <div class="card-content ayana">
+            <div class="card-title">
+              <h4>Ayana Villas Bali</h4>
+              <div class="link-hotel">
+                <a
+                  href="https://www.ayana.com/bali/the-villas-at-ayana/?booking_code=VILLAXTA"
+                  >More Info</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card-content bea">
+            <div class="card-title">
+              <h4>Beautiful Bali Villas</h4>
+              <div class="link-hotel">
+                <a href="https://www.beautifulbalivillas.com/">More Info</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-content samaya">
+            <div class="card-title">
+              <h4>The Samaya Seminyak Bali</h4>
+              <div class="link-hotel">
+                <a href="https://thesamayabali.com/seminyak/">More Info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="element">
+        <ul>
+          <li>
+            <a href="#"><i data-feather="instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i data-feather="facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i data-feather="github"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="element">
+        <p>@SeruputCompany</p>
+      </div>
+    </footer>
+
     <!-- script boostrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -77,6 +774,6 @@
       feather.replace();
     </script>
     <!-- script js -->
-    <script src="script.js" type="script"></script>
+    <script src="script.js"></script>
   </body>
 </html>

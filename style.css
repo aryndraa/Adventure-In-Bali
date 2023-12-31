@@ -13,11 +13,13 @@ body {
   color: #fff;
   font-family: var(--pop);
   background: #06041a;
+  font-family: var(--pop);
 }
 
 ol,
 ul {
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 .title-span {
@@ -26,7 +28,7 @@ ul {
 
 .header {
   display: flex;
-  padding: 30px 50px;
+  padding: 30px 40px;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -34,11 +36,18 @@ ul {
   top: 0;
   left: 0;
   z-index: 999999;
+  transition: 0.2s;
+}
+
+.header.active {
+  padding: 20px;
+  background-color: #06041a;
 }
 
 .header h1 {
   font-size: 1.8rem;
   font-family: var(--beb);
+  margin-bottom: 0;
 }
 
 .header .header-nav ul {
@@ -65,9 +74,783 @@ ul {
   display: none;
 }
 
-@media screen and (max-width: 1024px) and (min-width: 600px) {
+.side {
+  position: fixed;
+
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+  padding-top: 100px;
+  background: #0000002a;
+  z-index: 9999;
+  box-shadow: 0 0 10px #000000;
+  right: -250px;
+  transition: 0.2s;
+}
+
+.side li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.side li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* home */
+.home {
+  display: flex;
+  min-height: 110vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  position: relative;
+  background-image: url(assets/img/visualsofdana-uwIRTJuTfkc-unsplash.jpg);
+  background-size: cover;
+  background-position: center left;
+  box-shadow: inset 0 0 1000000rem rgb(0, 0, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  background-attachment: fixed;
+}
+
+.home-title .home-title-content {
+  display: none;
+  padding: 10px;
+}
+
+.home-title .home-title-content.active {
+  display: block;
+  transform: translateX(-500px);
+  opacity: 0;
+  animation: titleHome 0.5s ease forwards;
+}
+
+@keyframes titleHome {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.home-title .home-title-content h2 {
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 0 0 10px #06041a;
+}
+
+.home-title .home-title-content h1 {
+  font-size: 5.8rem;
+  text-shadow: 0 0 10px #06041a;
+
+  font-family: var(--beb);
+}
+
+.home-title .home-title-content p {
+  font-size: 1rem;
+  text-shadow: 0 0 10px #06041a;
+
+  font-weight: 300;
+}
+
+.home-content {
+  display: flex;
+  gap: 50px;
+  padding-left: 100px;
+  margin-top: 100px;
+}
+
+.home-content .card-content {
+  width: 200px;
+  height: 300px;
+  background-image: url("assets/visualsofdana-uwIRTJuTfkc-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.2s linear;
+}
+
+.home-content .card-content:hover {
+  transform: translateY(-10px);
+}
+
+.home-content .card-content.culture {
+  background-image: url(assets/wahyu-pratama-otS5DQxUNi4-unsplash.jpg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.home-content .card-content.beach {
+  background-image: url(assets/visualsofdana-UfVZbqZ1xjs-unsplash.jpg);
+  background-position: right;
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
+
+.home-content .card-content .card-title h3 {
+  font-size: 1rem;
+  text-shadow: 0 0 10px #06041a;
+}
+
+.home-content .card-content .card-title h2 {
+  font-size: 1.8rem;
+  font-family: var(--beb);
+  text-shadow: 0 0 10px #06041a;
+}
+
+.home-content .card-content .card-title button {
+  background: transparent;
+  color: #fff;
+  border: solid 1px #eeff00;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.home-content .card-content .card-title button:hover {
+  background: #eeff00;
+  color: #06041a;
+}
+
+/* about */
+
+.about {
+  padding: 5rem 5% 1.4rem;
+  background-position: center;
+  background-image: url("assets/about/paul-volkmer-qVotvbsuM_c-unsplash.jpg");
+  transition: 0.5s;
+  background-size: cover;
+}
+
+.about-container {
+  text-align: center;
+}
+
+.about-container h2 {
+  font-size: 4rem;
+  font-family: var(--beb);
+}
+
+.about-container p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.about-card {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.about-card .card-content {
+  width: 200px;
+  height: 250px;
+  background-image: url("assets/visualsofdana-uwIRTJuTfkc-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.2s linear;
+}
+
+.about-card .card-content:hover {
+  transform: scale(1.1);
+}
+
+.about-card .card-content.hicking {
+  background-image: url("assets/about/sasha-sashina--UJp4rYpPP0-unsplash.jpg");
+}
+
+.about-card .card-content.camp {
+  background-image: url(assets/about/jonathan-forage-1azAjl8FTnU-unsplash.jpg);
+}
+
+.about-card .card-content.party {
+  background-image: url(assets/about/long-truong-Y5PXVs1LpY4-unsplash.jpg);
+}
+
+.about-card .card-content.surfing {
+  background-image: url(assets/about/visualsofdana-lFM-rw_bXVY-unsplash.jpg);
+}
+
+.about-card .card-content .card-title h3 {
+  font-size: 2rem;
+  text-shadow: 0 0 10px #06041a;
+  font-family: var(--beb);
+}
+
+.about-card .card-content .card-title a {
+  color: #fff;
+  border: solid 1px #eeff00;
+  text-decoration: none;
+  padding: 2px 5px;
+  border-radius: 20px;
+  background: #06041a;
+  font-size: 1rem;
+}
+
+.about-card .card-content .card-title a:hover {
+  background: #eeff00;
+}
+
+.about-icon {
+  margin-top: 80px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.about-icon .link-about {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.about-icon .link-about::after {
+  content: "";
+  display: block;
+  border-bottom: #eeff00 1px solid;
+  padding-bottom: 0.5rem;
+  transform: scaleX(0.3);
+}
+
+.about-icon .link-about:hover {
+  transform: translateY(10px);
+  color: #eeff00;
+}
+
+.about-icon .about-sosmed ul {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 0;
+}
+
+.about-icon .about-sosmed li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-icon .about-sosmed li a {
+  color: #fff;
+  border: solid 1px #eeff00;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.about-icon .about-sosmed li a:hover {
+  background-color: #eeff00;
+}
+
+/* destination */
+.destination {
+  padding: 5rem 5% 1.4rem;
+}
+
+.destination h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: var(--beb);
+}
+
+.destination-container p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.destination-container .opsi ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.destination-container .opsi li {
+  list-style: none;
+}
+
+.destination-container .opsi li button {
+  background: transparent;
+  border: solid 1px #eeff00;
+  font-size: 1.2rem;
+  padding: 3px 10px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.destination-container .opsi li button.active {
+  transform: scaleY(10px);
+}
+
+.destination-container .opsi li button:hover {
+  background: #eeff00;
+}
+
+.destination-card {
+  padding-top: 40px;
+}
+
+.destination-card .card-list {
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  display: none;
+}
+
+.destination-card .card-list.active {
+  display: flex;
+  animation: up 1s ease forwards;
+  transform: translateY(500px);
+  opacity: 0;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.destination-card .card-list .card-content {
+  width: 250px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.2s linear;
+}
+
+.destination-card .card-list .card-content:hover {
+  transform: scale(1.08);
+}
+
+.destination-card .card-list .card-content .card-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.destination-card .card-list .card-content .card-title h3 {
+  font-size: 1.8rem;
+  font-family: var(--beb);
+  text-shadow: 0 0 10px #06041a;
+
+  margin-bottom: 0;
+}
+
+.destination-card .card-list .card-content .card-title a {
+  color: #fff;
+  border: solid #eeff00 1px;
+  padding: 6px;
+  background: #06041a8f;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 10px #06041a;
+}
+
+.destination-card .card-list .card-content .card-title a:hover {
+  background: #eeff00;
+  transform: translateX(10px);
+  box-shadow: 0 0 10px #eeff00;
+}
+.destination-card .card-list .card-content.sanur {
+  background-image: url("assets/card/beach/dyah-arum-Tvf4fl20G1I-unsplash.jpg");
+}
+
+.destination-card .card-list .card-content.kuta {
+  background-image: url("assets/card/beach/hakan-nural-DwkaHBiv1K0-unsplash.jpg");
+}
+
+.destination-card .card-list .card-content.nusa {
+  background-image: url("assets/card/beach/johannes-mandle-NNJolvWMLa4-unsplash.jpg");
+}
+
+.destination-card .card-list .card-content.lovina {
+  background-image: url("assets/card/beach/1703679847-27-12-2023-O3XocdxuCK20GsBpETg59VU1WFM7Zebm.jpg");
+}
+
+.destination-card .card-list .card-content.pandawa {
+  background-image: url(assets/card/beach/113558539457466a71d926c_PANDAWA_BEACH_-1.jpg);
+}
+
+.destination-card .card-list .card-content.padang {
+  background-image: url("assets/card/beach/beach-narrows-north-end.jpg");
+}
+
+.destination-card .card-list .card-content.agung {
+  background-image: url("assets/card/mountains/1511842426.jpg");
+}
+
+.destination-card .card-list .card-content.batur {
+  background-image: url("assets/card/mountains/610a5696664cf.png");
+}
+
+.destination-card .card-list .card-content.abang {
+  background-image: url("assets/card/mountains/shutterstock_1547488382.jpg");
+}
+
+.destination-card .card-list .card-content.batukaru {
+  background-image: url("assets/card/mountains/32619123802_794869c0c3_b.jpg");
+}
+
+.destination-card .card-list .card-content.baturlake {
+  background-image: url("assets/card/lake/Danau-Batur.jpg");
+  background-position: left;
+}
+
+.destination-card .card-list .card-content.beratan {
+  background-image: url("assets/card/lake/2-ab9a32a285dbc22c89abb5b3caf8cbc1_600x400.jpg");
+  position: right;
+}
+
+.destination-card .card-list .card-content.tamblingan {
+  background-image: url(assets/card/lake/wisata-alam-danau-tamblingan-94.jpg);
+  position: left;
+}
+
+.destination-card .card-list .card-content.raya {
+  background-image: url("assets/card/garden/cover4.png");
+}
+
+.destination-card .card-list .card-content.bloom {
+  background-image: url("assets/card/garden/bloomlanskap-3f8ccddc10da7e5594ff0d2ab7f55aba.jpg");
+}
+
+.destination-card .card-list .card-content.krisna {
+  background-image: url("assets/card/garden/krisna-funtastic-land-wahana-permainan-di-bali.jpg");
+}
+
+.destination-card .card-list .card-content.margarana {
+  background-image: url("assets/card/garden/monumen-pertempuran-di-taman-pujaan-bangsa-margarana-tabanan-bali.jpeg");
+}
+
+.destination-card .card-list .card-content.kertalangu {
+  background-image: url("assets/card/garden/Indahnya_Taman_Gong_Perdamaian_Kertalangu_288433.jpg");
+}
+
+.destination-card .card-list .card-content.lumintang {
+  background-image: url("assets/card/garden/datang_191009090934_MenikmatiBerbagaiMacamSaranadanFasilitasDiLapanganLumintang.jpg");
+}
+
+.destination-card .card-list .card-content.silas {
+  background-image: url("assets/card/garden/sekilas-SILAS-Agrotourism-Bali.jpg");
+}
+
+.destination-card .card-list .card-content.kumbasari {
+  background-image: url("assets/card/garden/Screenshot_2017-12-26-19-33-34-1.png");
+}
+
+.destination-card .card-list .card-content.nusagarden {
+  background-image: url("assets/card/garden/taman-nusa-bali-.jpg");
+  background-position: left;
+}
+
+.destination-card .card-list .card-content.ujung {
+  background-image: url("assets/card/garden/taman-ujung-bali_169.jpeg");
+}
+
+.destination-card .card-list .card-content.padanggarden {
+  background-image: url("assets/card/garden/1606687245515-25.jpeg");
+}
+
+.destination-card .card-list .card-content.big {
+  background-image: url("assets/card/garden/5cc71a78ae722.jpeg");
+}
+
+.destination-card .card-list .card-content.gwk {
+  background-image: url("assets/card/garden/marvin-meyer-NSIZiB-hhkU-unsplash.jpg");
+}
+
+.destination-card .card-list .card-content.sangeh {
+  background-image: url("assets/card/garden/monyet-monyet-di-objek-wisata-sangeh-badung-bali-minggu-5-september-2021.jpg");
+}
+
+.destination-card .card-list .card-content.besakih {
+  background-image: url("assets/card/temple/besakih-temple-2.jpg");
+}
+
+.destination-card .card-list .card-content.uluwatu {
+  background-image: url("assets/card/temple/harga-tiket-masuk-pura-uluwatu.jpg");
+}
+
+.destination-card .card-list .card-content.tanahlot {
+  background-image: url("assets/card/temple/30933141998_24f456da1b_b.jpg");
+}
+
+.destination-card .card-list .card-content.ulun {
+  background-image: url("assets/card/temple/Pura-Ulun-Danu-Beratan.jpg");
+  background-position: right;
+}
+
+.destination-card .card-list .card-content.empul {
+  background-image: url("assets/card/temple/bath-time.jpg");
+}
+
+.destination-card .card-list .card-content.gangga {
+  background-image: url("assets/card/temple/Tirta-Gangga-baru.jpg");
+}
+
+.destination-card .card-list .card-content.windu {
+  background-image: url("assets/card/temple/hq720.jpg");
+}
+
+.destination-card .card-list .card-content.tamanayu {
+  background-image: url("assets/card/temple/Pura_taman_ayun.jpg");
+}
+
+.destination-card .card-list .card-content.menjangan {
+  background-image: url("assets/card/temple/Pura-di-Menjangan-Bali.jpg");
+}
+
+.destination-card .card-list .card-content.gajah {
+  background-image: url("assets/card/temple/155774_cagar-budaya-goa-gajah-di-bali_1265_711.jpg");
+}
+
+.destination-card .card-list .card-content.alas {
+  background-image: url("assets/card/temple/wisata-alas-kedaton-bali_169.jpeg");
+}
+
+.destination-card .card-list .card-content.lempuyang {
+  background-image: url("assets/card/temple/caption.jpg");
+}
+
+.destination-card .card-list .card-content.balizoo {
+  background-image: url("assets/card/zoo/1-Bali-Zoo-Wisata-Edukasi-di-Bali-yang-Cocok-Dikunjungi-Bersama-Anak-1200x600.jpg");
+}
+
+.destination-card .card-list .card-content.safari {
+  background-image: url("assets/card/zoo/Bali-Safari.jpg");
+}
+
+.destination-card .card-list .card-content.bird {
+  background-image: url("assets/card/zoo/Bali-bird-park-Parrots.jpg");
+}
+
+.destination-card .card-list .card-content.reptile {
+  background-image: url("assets/card/zoo/bdd29611-dba3-466b-8bea-e93f4e4c692b_sm.jpg");
+}
+
+.destination-card .card-list .card-content.turtel {
+  background-image: url("assets/card/zoo/pulau-penyu-bali.jpg");
+}
+
+.destination-card .card-list .card-content.buterfly {
+  background-image: url("assets/card/zoo/colourful-sign.jpg");
+}
+
+.destination-card .card-list .card-content.gjh {
+  background-image: url("assets/card/zoo/Tiket\ Masuk\ Mason\ Elephant\ Park\ di\ Bali.jpg");
+  background-position: left;
+}
+
+.destination-card .card-list .card-content.boom {
+  background-image: url("assets/card/water/Waterbom-Bali1.jpg");
+}
+
+.destination-card .card-list .card-content.circus {
+  background-image: url("assets/card/water/Circus-Waterpark-Bali.jpg");
+}
+
+.destination-card .card-list .card-content.krsna {
+  background-image: url("assets/card/water/krisna-3-1024x669.jpg");
+}
+
+.destination-card .card-list .card-content.citra {
+  background-image: url("assets/card/water/Citraland-Waterpark.jpg");
+}
+
+.destination-card .card-list .card-content.boom2 {
+  background-image: url("assets/card/water/12725117_588534381311788_943687964_n-580x387.jpg");
+}
+
+.destination-card .card-list .card-content.flowrider {
+  background-image: url("assets/card/water/Waterbom-Bali-1024x679.jpg");
+}
+
+.destination-card .card-list .card-content.kutagren {
+  background-image: url("assets/card/water/t262x358_newkutagreenpark_bali_414.jpg");
+}
+
+.destination-card .card-list .card-content.wakepark {
+  background-image: url("assets/card/water/aqua2_1519260359-800x533.jpg");
+}
+
+/* guide */
+.staycation {
+  padding: 8rem 5% 1.4rem;
+
+  background-position: center;
+  background-size: cover;
+}
+
+.staycation h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: var(--beb);
+  margin-bottom: 20px;
+}
+
+.hotel {
+  margin-bottom: 50px;
+}
+
+.hotel h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.hotel .list-hotel {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.hotel .list-hotel .card-content {
+  width: 290px;
+  height: 390px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.2s linear;
+}
+
+.hotel .list-hotel .card-content.padma {
+  background-image: url("assets/hotel/44ea4c4c1db2fdec2360884242253c9d02596186.jpg");
+}
+
+.hotel .list-hotel .card-content.kayon {
+  background-image: url("assets/hotel/the-kayon-jungle-resort.jpg");
+}
+
+.hotel .list-hotel .card-content.melia {
+  background-image: url("assets/hotel/melia-bali.jpg");
+}
+
+.hotel .list-hotel .card-content.maya {
+  background-image: url("assets/resort/maya-ubud-resort-spa.jpg");
+}
+
+.hotel .list-hotel .card-content.vice {
+  background-image: url("assets/resort/viceroy-bali-aerial.jpg");
+  background-position: left;
+}
+
+.hotel .list-hotel .card-content.ulu {
+  background-image: url("assets/resort/hotel-at-nigh-time.jpg");
+  background-position: left;
+}
+
+.hotel .list-hotel .card-content.ayana {
+  background-image: url("assets/villa/drone-shot-of-ayana-villas.jpg");
+}
+
+.hotel .list-hotel .card-content.bea {
+  background-image: url("assets/villa/beautiful-bali-villas.jpg");
+}
+
+.hotel .list-hotel .card-content.samaya {
+  background-image: url("assets/villa/one-bedroom-royal-pavilion--v7470.jpg");
+}
+
+.hotel .list-hotel .card-content .card-title {
+  background: #06041a6c;
+  padding: 20px;
+}
+
+.hotel .list-hotel .card-content .card-title a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border: solid 1px #eeff00;
+  padding: 2px 10px;
+  border-radius: 20px;
+  text-shadow: 0 0 10px #06041a;
+}
+
+.hotel .list-hotel .card-content .card-title .price {
+  border: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000000;
+  flex-wrap: wrap;
+  padding: 30px;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+  gap: 20px;
+}
+
+footer li {
+  list-style: none;
+  margin-top: 2px;
+}
+
+footer a {
+  color: #fff;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+footer p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 600px) {
   .header {
     padding: 20px 20px;
+  }
+
+  .header.active {
+    padding: 15px;
   }
 
   .header h1 {
@@ -81,12 +864,131 @@ ul {
   .header .header-nav li a {
     font-size: 0.9rem;
   }
+
+  /* home*/
+  .home {
+    display: block;
+    padding: 10px;
+  }
+
+  .home-title .home-title-content {
+    margin-top: 100px;
+  }
+
+  .home-content {
+    padding-left: 0;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .home-content .card-content {
+    max-width: 100%;
+  }
+
+  .home-title .home-title-content p {
+    font-weight: 400;
+  }
+
+  .about-card {
+    gap: 20px;
+  }
+
+  .about-card .card-content {
+    height: 230px;
+    padding: 5px;
+  }
+
+  /* desti */
+  .destination {
+    padding: 5rem 2% 1.4rem;
+  }
+  .destination h2 {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .destination-container .opsi ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .destination-container p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  .destination-container .opsi li button {
+    background: transparent;
+    border: solid 1px #eeff00;
+    font-size: 1rem;
+    padding: 2px 8px;
+  }
+
+  .destination-card .card-list .card-content {
+    width: 180px;
+    height: 280px;
+    padding: 8px;
+  }
+
+  .destination-card .card-list .card-content .card-title h3 {
+    font-size: 1.2rem;
+    font-family: var(--beb);
+    text-shadow: 0 0 10px #06041a;
+
+    margin-bottom: 0;
+  }
+
+  /* staycation */
+  .staycation {
+    padding: 8rem 2% 1.4rem;
+  }
+
+  .staycation h2 {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .hotel h3 {
+    font-size: 1.2rem;
+  }
+
+  .hotel .list-hotel {
+    gap: 20px;
+  }
+
+  .hotel .list-hotel .card-content {
+    width: 190px;
+    height: 290px;
+  }
+
+  .hotel .list-hotel .card-content .card-title {
+    background: #06041a6c;
+    padding: 10px;
+  }
+
+  .hotel .list-hotel .card-content .card-title h4 {
+    font-size: 0.8rem;
+  }
+
+  .hotel .list-hotel .card-content .card-title a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .header {
     padding: 10px 20px;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .header.active {
+    padding: 10px 10px;
   }
 
   .header h1 {
@@ -106,9 +1008,180 @@ ul {
   .header-icon button {
     background: none;
     border: none;
+    height: 10px;
   }
 
   .header-icon button p {
     color: #fff;
+  }
+
+  .side.active {
+    right: 0;
+  }
+
+  .home {
+    display: block;
+    padding: 5px;
+  }
+
+  .home-content {
+    padding-left: 0;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .home-title .home-title-content {
+    margin-top: 150px;
+  }
+
+  .home-title .home-title-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .home-title .home-title-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-title .home-title-content p {
+    font-size: 0.8rem;
+  }
+
+  .home-content {
+    margin-top: 50px;
+  }
+
+  .home-content .card-content {
+    width: 150px;
+    height: 200px;
+    padding: 2px;
+  }
+
+  .home-content .card-content .card-title h3 {
+    margin-bottom: 0;
+    font-size: 0.5rem;
+  }
+
+  .home-content .card-content .card-title h2 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .home-content .card-content .card-title button {
+    font-size: 0.5rem;
+    padding: 2px 5px;
+  }
+
+  /* about */
+  .about {
+    padding: 5rem 2% 1.4rem;
+  }
+
+  .about-container h2 {
+    font-size: 2rem;
+  }
+
+  .about-container p {
+    font-size: 0.8rem;
+  }
+
+  .about-card {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .about-card .card-content {
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-card .card-content .card-title h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  .about-card .card-content .card-title a {
+    font-size: 0.5rem;
+  }
+
+  /* desti */
+  .destination {
+    padding: 5rem 2% 1.4rem;
+  }
+  .destination h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .destination-container .opsi ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: center;
+  }
+
+  .destination-container p {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  .destination-container .opsi li button {
+    background: transparent;
+    border: solid 1px #eeff00;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+  }
+
+  .destination-card .card-list .card-content {
+    width: 140px;
+    height: 230px;
+    padding: 5px;
+  }
+
+  .destination-card .card-list .card-content .card-title h3 {
+    font-size: 1rem;
+    font-family: var(--beb);
+    text-shadow: 0 0 10px #06041a;
+
+    margin-bottom: 0;
+  }
+
+  /* staycation */
+  .staycation {
+    padding: 8rem 1% 1.4rem;
+  }
+
+  .staycation h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .hotel h3 {
+    font-size: 1rem;
+  }
+
+  .hotel .list-hotel {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hotel .list-hotel .card-content {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hotel .list-hotel .card-content .card-title {
+    background: #06041a6c;
+    padding: 10px;
+  }
+
+  .hotel .list-hotel .card-content .card-title h4 {
+    font-size: 0.8rem;
+  }
+
+  .hotel .list-hotel .card-content .card-title a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.5rem;
   }
 }
